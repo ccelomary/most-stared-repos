@@ -1,46 +1,19 @@
-# Getting Started with Create React App
+# MOST STARRED REPOS DURING LAST MONTH
+## Description
+##### webapp that will list the most starred Github repos that were created in the last 30 days.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="https://evold.notion.site/image/https%3A%2F%2Fraw.githubusercontent.com%2Fhiddenfounders%2Ffrontend-coding-challenge%2Fmaster%2Fmockup.png?id=687b3c43-7bf5-4ed1-95d4-8b2f97b5b8d4&table=block&spaceId=2f8fd1a8-1a94-4ac9-84c9-f4165fdeb2fd&width=2000&userId=&cache=v2" alt="project mockup">
+## Features
+- As a User I should be able to list the most starred Github repos that were created in the last 30 days.
+- As a User I should see the results as a list. One repository per row.
+- As a User I should be able to see for each repo/row the following details :
+    - Repository name
+    - Repository description
+    - Number of stars for the repo.
+    - Number of issues for the repo.
+    - Username and avatar of the owner.
+- As a User I should be able to keep scrolling and new results should appear (pagination).
+  
+## USED TECHNOLOGIES
+- REACT JS
+- TYPESCRIPT
