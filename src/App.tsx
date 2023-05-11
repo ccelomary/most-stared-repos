@@ -1,10 +1,9 @@
 import React from 'react'
+import Home from './pages/home/Home'
 
 function App (): JSX.Element {
   return (
-    <div className="App">
-      Hello World
-    </div>
+    <Home />
   )
 }
 
