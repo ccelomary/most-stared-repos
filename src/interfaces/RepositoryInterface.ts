@@ -1,6 +1,6 @@
 import type OwnerInterface from './OwnerInterface'
 
-interface CardInterface {
+interface RepositoryInterface {
   id: number
   name: string
   description: string | null
@@ -10,4 +10,4 @@ interface CardInterface {
   owner: OwnerInterface
 }
 
-export default CardInterface
+export default RepositoryInterface

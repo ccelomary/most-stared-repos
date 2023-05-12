@@ -1,17 +1,20 @@
 import React from 'react'
-import type CardInterface from '../../interfaces/CardInterface'
-import styles from './Card.module.css'
+import type RepositoryInterface from '../../interfaces/RepositoryInterface'
+import styles from './Repository.module.css'
 import OutlinedText from '../outlinedText/OutlinedText'
+import convertNumberIntoSFormat from '../../utils/convertNumberIntoKFormat'
+import calculatePastDays from '../../utils/calculatePastDays'
 
-type CardProps = Omit<CardInterface, 'id'> & { key?: number }
+type RepositoryProps = Omit<RepositoryInterface, 'id'> & { key?: number }
 
-function Card ({
+function Repository ({
   name,
   description,
   starsCount,
   issuesCount,
+  createdAt,
   owner
-}: CardProps): JSX.Element {
+}: RepositoryProps): JSX.Element {
   const renderAvatar = (): JSX.Element => {
     return <div className={styles.owner__avatar_container}>
         <img src={owner.avatar} alt={owner.username} />
@@ -19,20 +22,23 @@ function Card ({
   }
 
   const renderOutlinedInfo = (): JSX.Element => {
+    const convertedIssues = convertNumberIntoSFormat(issuesCount)
+    const convertedStars = convertNumberIntoSFormat(starsCount)
     return <div className={styles.card__outlinedInfos}>
-            <OutlinedText name="stars" value="17k" />
-            <OutlinedText name="issues" value="18k" />
+            <OutlinedText name="stars" value={convertedStars} />
+            <OutlinedText name="issues" value={convertedIssues} />
           </div>
   }
 
   const renderCardTextInfo = (): JSX.Element => {
+    const pastDays = calculatePastDays(createdAt)
     return <div className={styles.card__textInfo__container}>
         <h1>{name}</h1>
         <p>{description}</p>
         <div className={styles.card__inline__info}>
           {renderOutlinedInfo()}
           <p className={styles.card__created_interval}>
-              submitted 30 years ago by {owner.username}
+              submitted {pastDays} days ago by {owner.username}
           </p>
         </div>
       </div>
@@ -44,4 +50,4 @@ function Card ({
     </div>
 }
 
-export default Card
+export default Repository
