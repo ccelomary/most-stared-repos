@@ -19,3 +19,17 @@
 ## USED TECHNOLOGIES
 - REACT JS
 - TYPESCRIPT
+- Eslint: for linting
+- Husky: to enforce linting code before committing it as well as enforce some guides while writing commit messages
+  
+this project created using  `npx create-react-app` command
+## AVAILABLE SCRIPTS
+### npm start
+to run the project in development mode
+hosted on `https://localhost:3000` in your local machine
+### npm run build
+to build the project for production
+### npm run lint
+to check project to lint your project using eslint and check wether you broke the rules
+### npm run lint:fix
+to fix linting problems
