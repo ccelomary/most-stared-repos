@@ -13,7 +13,8 @@ function Repository ({
   starsCount,
   issuesCount,
   createdAt,
-  owner
+  owner,
+  url
 }: RepositoryProps): JSX.Element {
   const renderAvatar = (): JSX.Element => {
     return <div className={styles.owner__avatar_container}>
@@ -33,7 +34,7 @@ function Repository ({
   const renderCardTextInfo = (): JSX.Element => {
     const pastDays = calculatePastDays(createdAt)
     return <div className={styles.card__textInfo__container}>
-        <h1>{name}</h1>
+        <h1><a target='blank' href={url}>{name}</a></h1>
         <p>{description}</p>
         <div className={styles.card__inline__info}>
           {renderOutlinedInfo()}

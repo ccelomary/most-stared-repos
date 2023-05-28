@@ -14,6 +14,7 @@ const fetchRepositoriesByPage: (page: number) => Promise<RepositoryInterface[] |
       starsCount: item.stargazers_count,
       issuesCount: item.open_issues_count,
       createdAt: item.created_at,
+      url: item.html_url,
       owner: {
         username: item.owner.login,
         avatar: item.owner.avatar_url

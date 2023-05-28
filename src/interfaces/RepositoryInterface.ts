@@ -7,6 +7,7 @@ interface RepositoryInterface {
   starsCount: number
   issuesCount: number
   createdAt: string
+  url: string
   owner: OwnerInterface
 }
 
